@@ -1,0 +1,14 @@
+{
+  "workspaces": {
+    "packages": [
+      "backend",
+      "frontend"
+    ]
+  },
+  "scripts": {
+    "dev": "cd backend && wing it"
+  },
+  "dependencies": {
+    "cors": "^2.8.5"
+  }
+}
