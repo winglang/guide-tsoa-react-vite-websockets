@@ -13,18 +13,18 @@ import { Request as Req} from "express";
 
 @Route("counter")
 @Middlewares(cors())
-export class UsersController extends Controller {
+export class CounterController extends Controller {
 	@Get()
-	public async getCounter(
+	public async getValue(
 		@Request() request: Req,
 	): Promise<number> {
 		let counter = getClient(request, "counter");
 		return await counter.peek();
 	}
 
-  
+
 	@Post()
-	public async createUser(
+	public async incrementCounter(
 		@Request() request: Req,
 	): Promise<number> {
     let counter = getClient(request, "counter");
